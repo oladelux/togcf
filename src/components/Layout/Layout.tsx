@@ -1,18 +1,15 @@
-import React, {FC} from 'react'
+import React, {FC, PropsWithChildren} from 'react'
 import { title } from '../../constants/constant'
 import { MetaHead } from "../MetaHead/MetaHead"
 import { Header } from "../Header/Header"
+import {Footer} from "../Footer/Footer";
 
-type LayoutProps = {
-    children?: React.ReactNode
-}
-
-export const Layout: FC<LayoutProps> = ({children}) => {
+export const Layout: FC<PropsWithChildren> = props => {
     return (
         <>
             <MetaHead title={title}/>
             <Header/>
-            <div className='layout'>{children}</div>
+            <div className='layout'>{props.children}</div>
         </>
     )
 }

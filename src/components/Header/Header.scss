@@ -1,0 +1,109 @@
+@use './../../assets/styles/colors.scss';
+@use './../../assets/styles/mixins.scss';
+
+.Header--Overlay {
+  background: linear-gradient(to right, transparent 50%, colors.$color-background2 50%);
+
+  @include mixins.mobile {
+    background: transparent;
+  }
+}
+.Header {
+  min-height: 100px;
+  display: flex;
+  margin: auto;
+  width: 90%;
+
+  &__burger {
+    background-color: colors.$color-background2;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+
+    &-link {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__Media {
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__Navs {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: colors.$color-background2;
+
+    @include mixins.mobile {
+      background: transparent;
+      display: none;
+    }
+
+    &__burger {
+      position: fixed;
+      right: 20px;
+      top: 20px;
+      width: 40px;
+      height: 40px;
+      background-color: darken(transparent, 10%);
+      border: 1px solid transparent;
+      border-radius: 4px;
+      z-index: 2;
+      display: none;
+
+      @include mixins.mobile {
+        display: block;
+      }
+
+      &-line {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 26px;
+        height: 4px;
+        background-color: colors.$color-text1;
+        transition: 0.3s transform ease, 0.3s opacity ease;
+
+        &--1 {
+          transform: translate(-50%, calc(-50% - 9px));
+        }
+
+        &--3 {
+          transform: translate(-50%, calc(-50% + 9px));
+        }
+      }
+    }
+
+    &__burger--active {
+      .navbar-dungeon__burger-line {
+        &--1 {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &--2 {
+          opacity: 0;
+        }
+
+        &--3 {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+
+      & + .navbar-dungeon__links {
+        transform: translateX(0%);
+      }
+    }
+
+    &-link {
+      text-decoration: none;
+      color: colors.$color-background;
+    }
+  }
+}

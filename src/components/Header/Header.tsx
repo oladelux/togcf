@@ -1,32 +1,51 @@
-import { FC } from "react"
-import { Link } from "react-router-dom"
+import {FC, useState} from "react"
+import {Link, NavLink} from "react-router-dom"
+import classnames from 'classnames'
+
+import Logo from '../../assets/images/togcf.svg'
+
+import './Header.scss'
 
 export const Header: FC = () => {
+    const [menuOpen, setMenuOpen] = useState(false)
+
+    const toggleMenu = () => {
+        setMenuOpen(prev => !prev)
+    }
   return (
-    <header className="container mx-auto px-4 shadow fixed z-10 top-0 w-full">
-      <div className="flex flex-row items-center justify-between py-4 bg-white" style={{ height: 'inherit' }}>
-        <div>
-          <Link to="/">
-              {/*<img src={motherlandLogo} className='w-20' alt="logo" width={150} height={70} />*/}
-          </Link>
-        </div>
-        <div>
-          <ul className="inline-flex space-x-4">
-            <li>
-              <Link to="/about">Business</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-            <li>
-              <Link to="/privacy-policy"></Link>
-            </li>
-          </ul>
-        </div>
+      <div className='Header--Overlay'>
+        <header className='Header'>
+      <div className="Header__Media">
+        <Link to="/" className='Header__Media-link'>
+            <img src={Logo} className='Header__Media-img' alt="logo" width={75} />
+        </Link>
       </div>
+      <div className='Header__Navs'>
+          <a href='#about-us' className='Header__Navs-link'>About Us</a>
+          <a href='#events' className='Header__Navs-link'>Events</a>
+          <a href='#' className='Header__Navs-link'>Blog</a>
+          <a href='#contact-us' className='Header__Navs-link'>Contact Us</a>
+      </div>
+        <button
+            onClick={toggleMenu}
+            className={classnames('Header__Navs__burger', {
+                'Header__Navs__burger--active': menuOpen,
+            })}
+        >
+            <span className='Header__Navs__burger-line Header__Navs__burger-line--1' />
+            <span className='Header__Navs__burger-line Header__Navs__burger-line--2' />
+            <span className='Header__Navs__burger-line Header__Navs__burger-line--3' />
+        </button>
     </header>
+          {
+              menuOpen &&
+              <div className='Header__burger'>
+                  <a href='#about-us' className='Header__Navs-link Header__burger-link'>About Us</a>
+                  <a href='#events' className='Header__Navs-link Header__burger-link'>Events</a>
+                  <a href='#' className='Header__Navs-link Header__burger-link'>Blog</a>
+                  <a href='#contact-us' className='Header__Navs-link Header__burger-link'>Contact Us</a>
+              </div>
+          }
+      </div>
   )
 }

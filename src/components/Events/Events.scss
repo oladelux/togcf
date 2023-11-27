@@ -1,0 +1,53 @@
+@use './../../assets/styles/colors';
+@use './../../assets/styles/mixins';
+
+.bold {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.Events {
+  background-color: colors.$color-background2;
+  min-height: 300px;
+
+  &__overview {
+    padding: 20px 0;
+
+    &-title {
+      padding-bottom: 20px;
+      font-size: 3rem;
+      color: colors.$color-background;
+      text-align: center;
+    }
+    &-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include mixins.mobile {
+        flex-direction: column;
+      }
+
+      &-media {
+      }
+
+      &-details {
+        padding: 0 20px;
+        color: colors.$color-background;
+
+        &--title {
+          font-size: 2rem;
+          text-transform: uppercase;
+        }
+
+        &--theme, &--date, &--time {
+          padding-bottom: 5px;
+        }
+
+        &--address {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

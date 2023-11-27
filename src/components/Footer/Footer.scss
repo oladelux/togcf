@@ -1,0 +1,12 @@
+@use './../../assets/styles/colors';
+
+.Footer {
+  padding: 20px 0;
+  background-color: colors.$color-background2;
+
+  &__overview {
+    margin: auto;
+    color: colors.$color-text1;
+    width: 90%;
+  }
+}

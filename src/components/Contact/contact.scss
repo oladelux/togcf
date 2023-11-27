@@ -1,0 +1,40 @@
+@use './../../assets/styles/colors';
+@use './../../assets/styles/mixins';
+
+.contact {
+  margin: auto;
+  width: 90%;
+  padding: 30px 0;
+
+  &__overview {
+    &-title {
+      font-size: 3rem;
+      color: colors.$color-text1;
+      text-align: center;
+    }
+
+    &-content {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 20px 0;
+
+      @include mixins.mobile {
+        flex-direction: column;
+      }
+
+      &--item {
+        display: flex;
+        align-items: center;
+
+        @include mixins.mobile {
+          margin-bottom: 10px;
+        }
+
+        &-span {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}

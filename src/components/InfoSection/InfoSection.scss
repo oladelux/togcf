@@ -1,0 +1,42 @@
+@use './../../assets/styles/colors';
+@use './../../assets/styles/mixins';
+
+.Info-section--overlay {
+  background-color: colors.$color-background2;
+}
+
+.Info-section {
+  padding: 30px 0;
+  margin: auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+
+  @include mixins.mobile {
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    @include mixins.mobile {
+      margin-bottom: 20px;
+    }
+
+    &-media {
+      padding-right: 20px;
+    }
+
+    &-title {
+      &--value {
+        font-size: 2rem;
+        color: colors.$color-background;
+      }
+
+      &--text {
+        color: colors.$color-background;
+      }
+    }
+  }
+}
