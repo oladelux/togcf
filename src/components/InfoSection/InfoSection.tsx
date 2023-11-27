@@ -35,7 +35,7 @@ export const InfoSection: FC = () => {
         <div className='Info-section--overlay'>
             <div className='Info-section'>
                 {InfoSectionItems.map(item =>
-                    <div className='Info-section__item'>
+                    <div key={item.title} className='Info-section__item'>
                         <div className='Info-section__item-media'>
                             <img src={item.img} alt='section-img' />
                         </div>
