@@ -26,16 +26,29 @@
 
     &-media {
       padding-right: 20px;
+      &-img {
+        @include mixins.tablet {
+          width: 50px;
+        }
+      }
     }
 
     &-title {
       &--value {
         font-size: 2rem;
         color: colors.$color-background;
+
+        @include mixins.tablet {
+          font-size: 1.6rem;
+        }
       }
 
       &--text {
         color: colors.$color-background;
+
+        @include mixins.tablet {
+          font-size: 0.86rem;
+        }
       }
     }
   }

@@ -30,7 +30,7 @@ export const Homepage:FC = () => {
                         </div>
                     </div>
                     <div className='Homepage__hero-media'>
-                        <img alt='girl' src={HeroImage} width={600} />
+                        <img className='Homepage__hero-media-img' alt='girl' src={HeroImage} width={600} />
                     </div>
                 </div>
                 <InfoSection />

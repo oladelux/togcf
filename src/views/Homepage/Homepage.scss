@@ -42,6 +42,10 @@
         @include mixins.mobile {
           font-size: 2rem;
         }
+
+        @include mixins.tablet {
+          font-size: 2rem;
+        }
       }
 
       &--title {
@@ -90,6 +94,12 @@
 
       @include mixins.mobile {
         display: none;
+      }
+
+      &-img {
+        @include mixins.tablet {
+          width: -webkit-fill-available;
+        }
       }
     }
   }

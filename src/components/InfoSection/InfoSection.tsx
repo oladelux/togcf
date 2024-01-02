@@ -37,7 +37,7 @@ export const InfoSection: FC = () => {
                 {InfoSectionItems.map(item =>
                     <div key={item.title} className='Info-section__item'>
                         <div className='Info-section__item-media'>
-                            <img src={item.img} alt='section-img' />
+                            <img className='Info-section__item-media-img' src={item.img} alt='section-img' />
                         </div>
                         <div className='Info-section__item-title'>
                             <div className='Info-section__item-title--value'>{item.value}</div>
