@@ -50,3 +50,42 @@ const apiRequest = async (
 
     return apiResponse(res)
 }
+
+type TicketType = {
+  /**
+   * The source city of the ticket.
+   */
+  source: string,
+  /**
+   * The destination city of the ticket.
+   */
+  destination: string
+}
+
+/**
+ * Restores a user trip as orignally planned
+ * @param tickets Represents user ticket with source and destination information.
+ * @returns String of comma separated cities as it was originally planned.
+ */
+export const restoreUserTrip = (tickets: TicketType[]): string | undefined => {
+  const originTrip = tickets.find(ticket => !tickets.some(data => data.destination === ticket.source))
+
+  if (!originTrip) {
+    console.error('Origin trip for user not found')
+    return
+  }
+
+  let nextLocation: TicketType | undefined = originTrip
+  let finalDestination: string = ''
+  let trip: string[] = []
+
+  while (nextLocation) {
+    trip.push(nextLocation.source)
+    finalDestination = nextLocation.destination
+    nextLocation = tickets.find(ticket => ticket.source === nextLocation?.destination)
+  }
+  trip.push(finalDestination)
+  
+  return trip.join(', ')
+
+}

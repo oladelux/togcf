@@ -19,6 +19,6 @@
   #  publish = "dist" # Folder with the static content for _redirect file
 
   ## more info on configuring this file: https://ntl.fyi/file-based-build-config
-[[redirects]]
+[redirects]
   from = "/donate"
   to = "https://www.paypal.com/donate/?hosted_button_id=CYLFYSXBZH6K2"

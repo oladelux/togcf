@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, useEffect } from "react"
 
 import {routes} from "../../constants/routes"
 
@@ -11,8 +11,14 @@ import {Footer} from "../../components/Footer/Footer"
 import './Homepage.scss'
 
 import HeroImage from '../../assets/images/hero.jpg'
+import { restoreUserTrip } from "../../api"
 
 export const Homepage:FC = () => {
+  useEffect(() => {
+    const aa = restoreUserTrip([{source: 'Amsterdam', destination: 'Berlin'}, {source: 'Paris', destination:
+    'London'}, {source: 'London', destination: 'Amsterdam'}])
+    console.log(aa)
+  }, [])
     return (
         <div>
             <div className='Homepage'>
