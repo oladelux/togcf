@@ -1,4 +1,4 @@
-import {FC} from "react";
+import { FC } from 'react'
 
 import PhoneLogo from '../../assets/images/phone.png'
 import InstagramLogo from '../../assets/images/instagram.png'
@@ -13,15 +13,21 @@ export const Contact: FC = () => {
                 <div className='contact__overview-title'>Contact</div>
                 <div className='contact__overview-content'>
                     <div className='contact__overview-content--item'>
-                        <span className='contact__overview-content--item-span'><img src={EmailLogo} alt='contact-image'/></span>
-                        info@togcf.com
+                        <span className='contact__overview-content--item-span'>
+                            <img src={EmailLogo} alt='email'/>
+                        </span>
+                        hello@togcf.org
                     </div>
                     <div className='contact__overview-content--item'>
-                        <span className='contact__overview-content--item-span'><img src={InstagramLogo} alt='contact-image'/></span>
+                        <span className='contact__overview-content--item-span'>
+                            <img src={InstagramLogo} alt='instagram'/>
+                        </span>
                         @togc_foundation
                     </div>
                     <div className='contact__overview-content--item'>
-                        <span className='contact__overview-content--item-span'><img src={PhoneLogo} alt='contact-image'/></span>
+                        <span className='contact__overview-content--item-span'>
+                            <img src={PhoneLogo} alt='mobile'/>
+                        </span>
                         08188205025, 08136327351
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 import {FC, useState} from "react"
-import {Link, NavLink} from "react-router-dom"
+import {Link} from "react-router-dom"
 import classnames from 'classnames'
 
 import Logo from '../../assets/images/togcf.svg'
@@ -21,10 +21,10 @@ export const Header: FC = () => {
         </Link>
       </div>
       <div className='Header__Navs'>
-          <a href='#about-us' className='Header__Navs-link'>About Us</a>
-          <a href='#events' className='Header__Navs-link'>Events</a>
-          <a href='#' className='Header__Navs-link'>Blog</a>
-          <a href='#contact-us' className='Header__Navs-link'>Contact Us</a>
+          <Link to='#about-us' className='Header__Navs-link'>About Us</Link>
+          <Link to='#events' className='Header__Navs-link'>Events</Link>
+          <Link to='#' className='Header__Navs-link'>Blog</Link>
+          <Link to='#contact-us' className='Header__Navs-link'>Contact Us</Link>
       </div>
         <button
             onClick={toggleMenu}
@@ -40,10 +40,10 @@ export const Header: FC = () => {
           {
               menuOpen &&
               <div className='Header__burger'>
-                  <a href='#about-us' className='Header__Navs-link Header__burger-link'>About Us</a>
-                  <a href='#events' className='Header__Navs-link Header__burger-link'>Events</a>
-                  <a href='#' className='Header__Navs-link Header__burger-link'>Blog</a>
-                  <a href='#contact-us' className='Header__Navs-link Header__burger-link'>Contact Us</a>
+                  <Link to='#about-us' className='Header__Navs-link Header__burger-link'>About Us</Link>
+                  <Link to='#events' className='Header__Navs-link Header__burger-link'>Events</Link>
+                  <Link to='#' className='Header__Navs-link Header__burger-link'>Blog</Link>
+                  <Link to='#contact-us' className='Header__Navs-link Header__burger-link'>Contact Us</Link>
               </div>
           }
       </div>

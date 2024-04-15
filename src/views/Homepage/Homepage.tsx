@@ -1,4 +1,5 @@
-import { FC, useEffect } from "react"
+import { FC } from "react"
+import { Link } from 'react-router-dom'
 
 import {routes} from "../../constants/routes"
 
@@ -11,14 +12,8 @@ import {Footer} from "../../components/Footer/Footer"
 import './Homepage.scss'
 
 import HeroImage from '../../assets/images/hero.jpg'
-import { restoreUserTrip } from "../../api"
 
 export const Homepage:FC = () => {
-  useEffect(() => {
-    const aa = restoreUserTrip([{source: 'Amsterdam', destination: 'Berlin'}, {source: 'Paris', destination:
-    'London'}, {source: 'London', destination: 'Amsterdam'}])
-    console.log(aa)
-  }, [])
     return (
         <div>
             <div className='Homepage'>
@@ -32,7 +27,7 @@ export const Homepage:FC = () => {
                         </div>
                         <div className='Homepage__hero-content--action'>
                             <a href={routes.donate} className='Homepage__hero-content--action-donate'>Donate Now</a>
-                            <a href='#about-us' className='Homepage__hero-content--action-about'>About Us</a>
+                            <Link to='#about-us' className='Homepage__hero-content--action-about'>About Us</Link>
                         </div>
                     </div>
                     <div className='Homepage__hero-media'>
