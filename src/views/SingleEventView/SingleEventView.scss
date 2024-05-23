@@ -1,0 +1,59 @@
+@use './../../assets/styles/colors';
+@use './../../assets/styles/fonts';
+@use './../../assets/styles/mixins';
+
+.Single-event-view {
+  &__header {
+    height: 550px;
+    background-color: colors.$light-background;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @include mixins.mobile {
+      flex-direction: column;
+    }
+
+    &-title {
+      &--text {
+        font-size: 40px;
+        line-height: 52px;
+        font-family: fonts.$font-bold;
+        color: colors.$color-background2;
+
+        @include mixins.mobile {
+          font-size: 25px;
+        }
+      }
+
+      &--date {
+        display: flex;
+        align-items: center;
+        padding-bottom: 5px;
+      }
+    }
+
+    &-image {
+      max-width: 20%;
+      height: auto;
+      display: block;
+
+      @include mixins.mobile {
+        max-width: 80%;
+      }
+    }
+  }
+
+  &__content {
+    margin: auto;
+    width: 50%;
+    font-size: 20px;
+    padding: 20px 0;
+
+    @include mixins.mobile {
+      width: 100%;
+      padding: 15px 20px;
+      font-size: 16px;
+    }
+  }
+}

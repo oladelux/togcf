@@ -5,6 +5,7 @@ import classnames from 'classnames'
 import Logo from '../../assets/images/togcf.svg'
 
 import './Header.scss'
+import { routes } from '../../constants/routes';
 
 export const Header: FC = () => {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -22,7 +23,7 @@ export const Header: FC = () => {
       </div>
       <div className='Header__Navs'>
           <Link to='#about-us' className='Header__Navs-link'>About Us</Link>
-          <Link to='#events' className='Header__Navs-link'>Events</Link>
+          <Link to={routes.event} className='Header__Navs-link'>Events</Link>
           <Link to='#' className='Header__Navs-link'>Blog</Link>
           <Link to='#contact-us' className='Header__Navs-link'>Contact Us</Link>
       </div>
@@ -41,7 +42,7 @@ export const Header: FC = () => {
               menuOpen &&
               <div className='Header__burger'>
                   <Link to='#about-us' className='Header__Navs-link Header__burger-link'>About Us</Link>
-                  <Link to='#events' className='Header__Navs-link Header__burger-link'>Events</Link>
+                  <Link to={routes.event} className='Header__Navs-link Header__burger-link'>Events</Link>
                   <Link to='#' className='Header__Navs-link Header__burger-link'>Blog</Link>
                   <Link to='#contact-us' className='Header__Navs-link Header__burger-link'>Contact Us</Link>
               </div>

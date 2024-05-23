@@ -3,23 +3,21 @@
 @use './../../assets/styles/mixins';
 
 .Homepage {
-  height: calc(100vh - 100px);
-  background: linear-gradient(to right, transparent 50%, colors.$color-background2 50%);
 
   @include mixins.mobile {
     background: transparent;
   }
 
   &__hero {
-    margin: auto;
-    width: 90%;
     padding-top: 20px;
     display: flex;
-    height: inherit;
+    height: calc(100vh - 190px);
+    background: linear-gradient(to right, transparent 50%, colors.$color-background2 50%);
 
     @include mixins.mobile {
       width: 100%;
       padding-top: 0;
+      background: transparent;
     }
 
     &-content {

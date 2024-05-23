@@ -4,6 +4,8 @@ import { routes } from './constants/routes'
 
 import { Layout } from './components/Layout/Layout'
 import { Homepage } from './views/Homepage/Homepage'
+import { EventsView } from './views/EventsView/EventsView'
+import { SingleEventView } from './views/SingleEventView/SingleEventView'
 
 export const AppRoutes: FC = () => {
   return (
@@ -11,6 +13,8 @@ export const AppRoutes: FC = () => {
       <Layout>
         <Routes>
           <Route path={routes.home} element={<Homepage />}/>
+          <Route path={routes.event} element={<EventsView />}/>
+          <Route path={routes.singleEvent} element={<SingleEventView />}/>
         </Routes>
       </Layout>
     </>

@@ -14,7 +14,7 @@
 
     &-title {
       padding-bottom: 20px;
-      font-size: 3rem;
+      font-size: 2.5rem;
       color: colors.$color-background;
       text-align: center;
     }
@@ -35,8 +35,10 @@
         color: colors.$color-background;
 
         &--title {
-          font-size: 2rem;
+          font-size: 1.5rem;
           text-transform: uppercase;
+          text-decoration: none;
+          color: colors.$color-background;
         }
 
         &--theme, &--date, &--time {
