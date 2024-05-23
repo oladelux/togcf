@@ -6,8 +6,6 @@ import RoomOutlinedIcon from '@mui/icons-material/RoomOutlined'
 
 import { useEvents } from '../../hooks/useEvents'
 
-import SipImage from  '../../assets/images/sip.jpg'
-
 import './SingleEventView.scss'
 import { formatFullDate, formatTime } from '../../constants/date';
 
@@ -31,7 +29,11 @@ export const SingleEventView = () => {
           <div className='Single-event-view__header-title--date'>
             <RoomOutlinedIcon/> {event && event.attributes.Address}</div>
         </div>
-        <img className='Single-event-view__header-image' src={SipImage} alt='sip'/>
+        <img
+          className='Single-event-view__header-image'
+          src={event?.attributes.Image.data.attributes.formats.small.url}
+          alt={event?.attributes.Image.data.attributes.name}
+        />
       </div>
       <div className='Single-event-view__content'>
         <Markdown>{event?.attributes.Content}</Markdown>

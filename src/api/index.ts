@@ -73,6 +73,18 @@ export type EventResponseData = {
     Time: string
     Address: string
     Content: string
+    Image: {
+      data: {
+        attributes: {
+          name: string
+          formats: {
+            small: {
+              url: string
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -101,11 +113,11 @@ export type EventResponse = {
 }
 
 export async function getEvents(): Promise<EventsResponse> {
-  const res = await apiRequest('/api/events', 'GET')
+  const res = await apiRequest('/api/events?populate=Image.Icon', 'GET')
   return await res.json()
 }
 
 export async function getEvent(id: string): Promise<{ data: EventResponseData }> {
-  const res = await apiRequest(`/api/events/${id}`, 'GET')
+  const res = await apiRequest(`/api/events/${id}?populate=Image.Icon`, 'GET')
   return await res.json()
 }

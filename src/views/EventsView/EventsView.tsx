@@ -2,8 +2,6 @@ import { Link } from 'react-router-dom'
 
 import { useEvents } from '../../hooks/useEvents'
 
-import SipImage from  '../../assets/images/sip.jpg'
-
 import './EventsView.scss'
 import { formatDate } from '../../constants/date';
 
@@ -23,7 +21,7 @@ export const EventsView = () => {
           events.map(event => (
             <Link key={event.id} to={`/events/${event.id}`} className='Events-view__events-item'>
               <div className='Events-view__events-item-overlay'>
-                <img className='Events-view__events-item-overlay--img' src={SipImage} alt='event-logo' />
+                <img className='Events-view__events-item-overlay--img' src={event.attributes.Image.data.attributes.formats.small.url} alt='event-logo' />
                 <div className='Events-view__events-item-overlay--text'>
                   <div className='Events-view__events-item-overlay--text-date'>{formatDate(event.attributes.Date)}</div>
                 </div>
