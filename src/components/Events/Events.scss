@@ -41,13 +41,8 @@
           color: colors.$color-background;
         }
 
-        &--theme, &--date, &--time {
+        &--theme, &--date, &--time, &--address {
           padding-bottom: 5px;
-        }
-
-        &--address {
-          display: flex;
-          flex-direction: column;
         }
       }
     }
