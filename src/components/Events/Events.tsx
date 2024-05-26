@@ -28,7 +28,8 @@ export const Events: FC = () => {
                             <div className='Events__overview-content-details--time'><span
                               className='bold'>Time:</span> {formatTime(latestEvent.attributes.Time)}</div>
                             <div className='Events__overview-content-details--address'>
-                                {latestEvent.attributes.Address}
+                                <span
+                                  className='bold'>Address:</span> {latestEvent.attributes.Address}
                             </div>
                         </>
                     }
