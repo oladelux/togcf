@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react'
-import { EventResponseData, EventsResponse, getEvent, getEvents } from '../api'
+import { useEffect, useState } from 'react'
+import { EventResponseData, EventsResponse } from '../api'
+import { appEvents, singleAppEvents } from '../constants/data';
 
 type UseEventsResult = {
   events: EventsResponse['data'] | null
@@ -18,11 +19,9 @@ export const useEvents = (eventId?: string): UseEventsResult => {
     const fetchEvents = async () => {
       try {
         if(eventId){
-          const eventResponse = await getEvent(eventId)
-          setEvent(eventResponse.data)
+          setEvent(singleAppEvents.data)
         } else {
-          const eventsResponse = await getEvents()
-          setEvents(eventsResponse.data)
+          setEvents(appEvents.data)
         }
       } catch (err) {
         setError(err as Error)
