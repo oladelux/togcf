@@ -21,7 +21,7 @@ export const Homepage:FC = () => {
                       Improving the overall quality of life of the <br/>girl child.
                   </div>
                   <div className='Homepage__hero-content--sub-text'>
-                      Empowering african girls, nurturing dreams and building futures.
+                    Empowering Girls, Nurturing Dreams and Building Futures.
                   </div>
                   <div className='Homepage__hero-content--action'>
                       <a href={routes.donate} className='Homepage__hero-content--action-donate'>Donate Now</a>
@@ -33,9 +33,26 @@ export const Homepage:FC = () => {
               </div>
           </div>
           <InfoSection/>
-          <AboutUs/>
-          <Events/>
-          <Contact/>
+        <div className='Homepage__blog'>
+          <div className='Homepage__blog-title'>Blog</div>
+          <div className='Homepage__blog-grid'>
+            No blog post available
+            {/*<div className='Homepage__blog-grid-card'></div>
+            <div className='Homepage__blog-grid-card'></div>
+            <div className='Homepage__blog-grid-card'></div>*/}
+          </div>
+        </div>
+        <div className='Homepage__info'>
+          <div className='Homepage__info_flex'>
+            <div className='Homepage__info_flex-box'>
+              <span className='Homepage__info_flex-sign'>"</span>Imagine a world where every girl child has the
+              opportunity to reach her full potential.<span className='Homepage__info_flex-sign'>"</span>
+            </div>
+          </div>
+        </div>
+       {/* <AboutUs/>*/}
+        <Events/>
+        <Contact/>
       </div>
     )
 }

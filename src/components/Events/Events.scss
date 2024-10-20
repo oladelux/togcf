@@ -6,7 +6,8 @@
   text-transform: uppercase;
 }
 .Events {
-  background-color: colors.$color-background2;
+  padding: 40px 0;
+  border-bottom: 2px solid colors.$color-background2;
   min-height: 300px;
 
   &__overview {
@@ -15,7 +16,7 @@
     &-title {
       padding-bottom: 20px;
       font-size: 2.5rem;
-      color: colors.$color-background;
+      color: colors.$color-text1;
       text-align: center;
     }
     &-content {
@@ -32,13 +33,13 @@
 
       &-details {
         padding: 0 20px;
-        color: colors.$color-background;
+        color: colors.$color-text1;
 
         &--title {
           font-size: 1.5rem;
           text-transform: uppercase;
           text-decoration: none;
-          color: colors.$color-background;
+          color: colors.$color-text1;
         }
 
         &--theme, &--date, &--time, &--address {

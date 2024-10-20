@@ -10,12 +10,12 @@ import './InfoSection.scss'
 const InfoSectionItems = [
     {
         img: CooperationIcon,
-        value: '100+',
+        value: '1300+',
         title: 'Girls Reached'
     },
     {
         img: CampaignIcon,
-        value: '3+',
+        value: '5+',
         title: 'Successful Campaign'
     },
     {
@@ -25,7 +25,7 @@ const InfoSectionItems = [
     },
     {
         img: VolunteerIcon,
-        value: '10+',
+        value: '15+',
         title: 'Volunteers'
     }
 ]

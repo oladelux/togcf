@@ -1,0 +1,37 @@
+@use './../../assets/styles/colors';
+@use './../../assets/styles/fonts';
+@use './../../assets/styles/mixins';
+
+.About-us-view {
+  margin: auto;
+  width: 90%;
+  padding: 30px 0;
+
+  &__header {
+    &-title {
+      font-size: 3em;
+      font-weight: bold;
+      padding: 20px 0;
+
+      @include mixins.mobile {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+
+    @include mixins.mobile {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-text {
+        padding: 20px;
+        font-size: 1.2em;
+        line-height: 1.5em;
+        color: colors.$color-text1;
+    }
+  }
+}

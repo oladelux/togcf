@@ -66,8 +66,8 @@
         &-donate, &-about {
           padding: 15px 20px;
           border-radius: 5px;
-          background-color: colors.$color-background2;
-          border: 1px solid colors.$color-background2;
+          background-color: colors.$color-background3;
+          border: 1px solid colors.$color-background3;
           color: colors.$color-background;
           text-decoration: none;
           margin-right: 20px;
@@ -97,6 +97,77 @@
       &-img {
         @include mixins.tablet {
           width: -webkit-fill-available;
+        }
+      }
+    }
+  }
+
+  &__blog {
+    margin: auto;
+    width: 85%;
+    padding: 30px 0;
+
+    &-title {
+      font-size: 3rem;
+      text-transform: capitalize;
+      color: colors.$color-text1;
+      width: 40%;
+      padding: 20px 0;
+    }
+
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+
+      &-card {
+        height: 200px;
+        width: 200px;
+        border: 1px solid;
+      }
+    }
+  }
+
+  &__info {
+    margin-top: 20px;
+    color: colors.$color-background;
+    height: 400px;
+    background: linear-gradient(
+      135deg,
+      colors.$color-background4 12.5%,
+      colors.$color-background3 12.5%,
+      colors.$color-background3 25%,
+      colors.$color-background2 25%,
+      colors.$color-background2 75%,
+      colors.$color-background3 75%,
+      colors.$color-background3 87.5%,
+      colors.$color-background4 87.5%,
+    );
+
+    &_flex{
+      font-size: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      @include mixins.mobile {
+        font-size: 1.5rem;
+      }
+
+      &-box {
+        margin: 0 auto;
+        width: 45%;
+      }
+
+      &-sign {
+        font-size: 4rem;
+        font-family: cursive;
+        text-transform: capitalize;
+
+        @include mixins.mobile {
+          font-size: 1.5rem;
+          padding: 0 2px;
         }
       }
     }
