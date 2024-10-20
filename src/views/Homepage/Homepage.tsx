@@ -25,7 +25,7 @@ export const Homepage:FC = () => {
                   </div>
                   <div className='Homepage__hero-content--action'>
                       <a href={routes.donate} className='Homepage__hero-content--action-donate'>Donate Now</a>
-                      <Link to='#about-us' className='Homepage__hero-content--action-about'>About Us</Link>
+                      <Link to={routes.about} className='Homepage__hero-content--action-about'>About Us</Link>
                   </div>
               </div>
               <div className='Homepage__hero-media'>
