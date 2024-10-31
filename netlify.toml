@@ -21,6 +21,6 @@
   ## more info on configuring this file: https://ntl.fyi/file-based-build-config
 [[redirects]]
   from = "/donate"
-  to = "https://www.paypal.com/donate/?hosted_button_id=CYLFYSXBZH6K2"
+  to = "https://paystack.com/pay/togcfoundation"
   status = 200
   force = true
