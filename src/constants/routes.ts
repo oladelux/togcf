@@ -1,7 +1,7 @@
 export enum Routes {
   HOME = '/',
-  NG_DONATE = '/ng-donation',
-  INTERNATIONAL_DONATE = '/international-donation',
+  NG_DONATE = '/ng-donation/',
+  INTERNATIONAL_DONATE = '/international-donation/',
   EVENT = '/events',
   ABOUT = '/about',
   SINGLE_EVENT = '/events/:eventId'
