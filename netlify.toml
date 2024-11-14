@@ -22,11 +22,11 @@
 [[redirects]]
   from = "/ng-donation/"
   to = "https://paystack.com/pay/togcfoundation"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/international-donation/"
   to = "https://www.paypal.com/donate/?hosted_button_id=CYLFYSXBZH6K2"
-  status = 200
+  status = 301
   force = true
