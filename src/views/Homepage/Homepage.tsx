@@ -23,13 +23,14 @@ export const Homepage:FC = () => {
                   <div className='Homepage__hero-content--sub-text'>
                     Empowering Girls, Nurturing Dreams and Building Futures.
                   </div>
-                  <div className='Homepage__hero-content--action'>
-                      <a href={routes.donate} className='Homepage__hero-content--action-donate'>Donate Now</a>
-                      <Link to={routes.about} className='Homepage__hero-content--action-about'>About Us</Link>
-                  </div>
+                <div className='Homepage__hero-content--action'>
+                  <a href={routes.ngDonate} className='Homepage__hero-content--action-donate'>Donate (Nigeria)</a>
+                  <a href={routes.internationalDonate} className='Homepage__hero-content--action-donate'>Donate (International)</a>
+                  {/*<Link to={routes.about} className='Homepage__hero-content--action-about'>About Us</Link>*/}
+                </div>
               </div>
-              <div className='Homepage__hero-media'>
-                  <img className='Homepage__hero-media-img' alt='girl' src={HeroImage} width={600}/>
+            <div className='Homepage__hero-media'>
+              <img className='Homepage__hero-media-img' alt='girl' src={HeroImage} width={600}/>
               </div>
           </div>
           <InfoSection/>

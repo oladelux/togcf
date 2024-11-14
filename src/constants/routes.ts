@@ -1,6 +1,7 @@
 export enum Routes {
   HOME = '/',
-  DONATE = '/donate',
+  NG_DONATE = '/ng-donation',
+  INTERNATIONAL_DONATE = '/international-donation',
   EVENT = '/events',
   ABOUT = '/about',
   SINGLE_EVENT = '/events/:eventId'
@@ -8,7 +9,8 @@ export enum Routes {
 
 export const routes = {
   home: Routes.HOME,
-  donate: Routes.DONATE,
+  ngDonate: Routes.NG_DONATE,
+  internationalDonate: Routes.INTERNATIONAL_DONATE,
   event: Routes.EVENT,
   about: Routes.ABOUT,
   singleEvent: Routes.SINGLE_EVENT
