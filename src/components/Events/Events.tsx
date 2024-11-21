@@ -9,7 +9,8 @@ import './Events.scss'
 export const Events: FC = () => {
 
     const { events } = useEvents()
-    const latestEvent = events && events[0]
+    //Get latest event by date
+    const latestEvent = events?.sort((a, b) => new Date(b.attributes.Date).getTime() - new Date(a.attributes.Date).getTime())[0]
 
     return (
         <div className='Events' id='events'>

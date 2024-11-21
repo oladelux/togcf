@@ -65,7 +65,7 @@ const apiRequest = async (
 }
 
 export type EventResponseData = {
-  id: number
+  id: string
   attributes: {
     Title: string
     Description: string

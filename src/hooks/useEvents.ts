@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react'
 import { EventResponseData, EventsResponse } from '../api'
-import { appEvents, singleAppEvents } from '../constants/data';
+import { appEvents } from '../constants/data';
 
 type UseEventsResult = {
   events: EventsResponse['data'] | null
-  event: EventResponseData | null
+  event: EventResponseData | undefined
   loading: boolean
   error: Error | null
 }
 
 export const useEvents = (eventId?: string): UseEventsResult => {
   const [events, setEvents] = useState<EventsResponse['data'] | null>(null)
-  const [event, setEvent] = useState<EventResponseData | null>(null)
+  const [event, setEvent] = useState<EventResponseData | undefined>(undefined)
   const [loading, setLoading] = useState<boolean>(true)
   const [error, setError] = useState<Error | null>(null)
 
@@ -19,7 +19,8 @@ export const useEvents = (eventId?: string): UseEventsResult => {
     const fetchEvents = async () => {
       try {
         if(eventId){
-          setEvent(singleAppEvents.data)
+          const filterEvent = appEvents.data.find((event) => event.id === eventId)
+          setEvent(filterEvent)
         } else {
           setEvents(appEvents.data)
         }
